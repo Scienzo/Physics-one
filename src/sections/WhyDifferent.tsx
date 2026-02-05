@@ -41,7 +41,7 @@ const features = [
 
 const WhyDifferent = () => {
   return (
-    <section id="why-different" className="py-16 sm:py-20 bg-physics-dark-800 relative overflow-hidden">
+    <section id="why-different" className="py-16 sm:py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-secondary)' }}>
       {/* Decorative Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-electric-500/5 rounded-full blur-3xl" />
@@ -57,10 +57,10 @@ const WhyDifferent = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3" style={{ color: 'var(--text-heading)' }}>
               Why Physics<span className="text-electric-400">+</span> is Different
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base">
+            <p className="text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>
               අපගේ ඉගැන්වීම් ක්‍රමය වෙනස් වන්නේ ඇයි?
             </p>
           </motion.div>
@@ -85,7 +85,7 @@ const WhyDifferent = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2" style={{ color: 'var(--text-heading)' }}>
                   {feature.title}
                 </h3>
                 <p className="text-electric-400 text-sm mb-4 font-medium">
@@ -93,7 +93,7 @@ const WhyDifferent = () => {
                 </p>
 
                 {/* Description */}
-                <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-6">
+                <p className="text-sm sm:text-base leading-relaxed mb-6" style={{ color: 'var(--text-secondary)' }}>
                   {feature.description}
                 </p>
 

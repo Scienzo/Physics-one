@@ -31,7 +31,7 @@ const Hero = () => {
     <section
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden font-inter"
-      style={{ backgroundColor: "#0A192F" }}
+      style={{ backgroundColor: 'var(--bg-primary)' }}
     >
       {/* Background Grid Pattern */}
       <div
@@ -99,7 +99,7 @@ const Hero = () => {
                 <div className="absolute -inset-[2px] bg-gradient-to-r from-electric-400 via-plasma-500 to-electric-400 rounded-3xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" style={{ backgroundSize: '200% 200%' }} />
 
                 {/* Glass Card */}
-                <div className="relative h-full bg-physics-dark-900/90 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+                <div className="relative h-full backdrop-blur-xl rounded-3xl border shadow-2xl overflow-hidden" style={{ backgroundColor: 'var(--glass-bg)', borderColor: 'var(--border-default)' }}>
                   {/* Portrait Image */}
                   <div className="absolute inset-3 rounded-2xl overflow-hidden">
                     <img
@@ -155,8 +155,8 @@ const Hero = () => {
                     delay: 1,
                   }}
                 >
-                  <div className="bg-physics-dark-900/90 backdrop-blur-lg px-4 py-2 rounded-xl border border-electric-400/30 shadow-glow-sm">
-                    <span className="text-white font-bold text-sm sm:text-base">15+ Years</span>
+                  <div className="backdrop-blur-lg px-4 py-2 rounded-xl border border-electric-400/30 shadow-glow-sm" style={{ backgroundColor: 'var(--glass-bg)' }}>
+                    <span className="font-bold text-sm sm:text-base" style={{ color: 'var(--text-heading)' }}>15+ Years</span>
                     <p className="text-electric-400 text-xs font-medium">Teaching Excellence</p>
                   </div>
                 </motion.div>
@@ -182,7 +182,8 @@ const Hero = () => {
             {/* Heading */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
+              style={{ color: 'var(--text-heading)' }}
             >
               Master the{" "}
               <span
@@ -204,7 +205,8 @@ const Hero = () => {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="text-lg sm:text-xl text-slate-400 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
+              className="text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
+              style={{ color: 'var(--text-secondary)' }}
             >
               Advanced visualization and logic-first learning designed for
               ambitious GCE A/L 2026 students. Transform complex concepts into
@@ -320,7 +322,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A192F] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none" style={{ background: 'linear-gradient(to top, var(--bg-primary), transparent)' }} />
     </section>
   );
 };

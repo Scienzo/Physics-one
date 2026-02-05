@@ -48,7 +48,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-20 bg-physics-dark-800 relative overflow-hidden">
+    <section id="faq" className="py-16 sm:py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-secondary)' }}>
       {/* Decorative Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-72 h-72 bg-electric-500/5 rounded-full blur-3xl" />
@@ -64,10 +64,10 @@ const FAQ = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3" style={{ color: 'var(--text-heading)' }}>
               Frequently Asked <span className="text-electric-400">Questions</span>
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base">
+            <p className="text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>
               නිතර අසන ප්‍රශ්න
             </p>
           </motion.div>
@@ -90,7 +90,7 @@ const FAQ = () => {
                   className="w-full flex items-center justify-between p-5 sm:p-6 text-left hover:bg-white/5 transition-colors"
                 >
                   <div className="flex-1 pr-4">
-                    <h3 className="text-base sm:text-lg font-semibold text-white mb-1">
+                    <h3 className="text-base sm:text-lg font-semibold mb-1" style={{ color: 'var(--text-heading)' }}>
                       {faq.question}
                     </h3>
                     <p className="text-sm text-electric-400">
@@ -132,7 +132,7 @@ const FAQ = () => {
                 >
                   <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-2">
                     <div className="pl-0 sm:pl-2 border-l-2 border-electric-400/30">
-                      <p className="text-slate-300 text-sm sm:text-base leading-relaxed pl-4">
+                      <p className="text-sm sm:text-base leading-relaxed pl-4" style={{ color: 'var(--text-secondary)' }}>
                         {faq.answer}
                       </p>
                     </div>
@@ -152,10 +152,10 @@ const FAQ = () => {
           className="mt-12 text-center"
         >
           <div className="bg-gradient-to-r from-electric-500/10 to-electric-600/10 border border-electric-400/20 rounded-2xl p-6 sm:p-8">
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3" style={{ color: 'var(--text-heading)' }}>
               Got Questions?
             </h3>
-            <p className="text-slate-400 mb-6 text-sm sm:text-base">
+            <p className="mb-6 text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>
               Feel free to reach out to us anytime via WhatsApp
             </p>
             <a

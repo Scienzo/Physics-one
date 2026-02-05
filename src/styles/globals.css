@@ -69,6 +69,63 @@
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-blur: 12px;
+  
+  /* Theme-aware colors (dark mode default) */
+  --bg-primary: #0A192F;
+  --bg-secondary: #0d1f3c;
+  --bg-tertiary: #112240;
+  --bg-deep: #050a14;
+  
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-heading: #ffffff;
+  
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(34, 211, 238, 0.3);
+  
+  --shadow-color: rgba(0, 0, 0, 0.37);
+  --glow-opacity: 0.4;
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --physics-950: #f8fafc;
+  --physics-900: #f1f5f9;
+  --physics-800: #e2e8f0;
+  --physics-700: #cbd5e1;
+  
+  /* Keep accent colors vibrant */
+  --electric-400: #0891b2;
+  --electric-500: #0e7490;
+  --electric-600: #155e75;
+  
+  --plasma-400: #ea580c;
+  --plasma-500: #c2410c;
+  --plasma-600: #9a3412;
+  
+  /* Frosted glass for light mode */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-blur: 16px;
+  
+  /* Light theme backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-deep: #e2e8f0;
+  
+  /* Light theme text */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-heading: #0f172a;
+  
+  --border-default: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(14, 116, 144, 0.4);
+  
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --glow-opacity: 0.2;
 }
 
 /* Custom global styles */
@@ -78,8 +135,21 @@ html {
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background: var(--physics-900);
-  color: #e2e8f0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth theme transitions for all elements */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Disable transitions on page load to prevent flash */
+.no-transitions * {
+  transition: none !important;
 }
 
 /* Selection styling */
@@ -94,7 +164,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--physics-950);
+  background: var(--bg-deep);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -104,6 +174,19 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--electric-500);
+}
+
+/* Light mode scrollbar adjustments */
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #0891b2;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #0e7490;
 }
 
 /* Custom utility classes */
@@ -160,9 +243,18 @@ body {
   }
   
   .glass-card-hover:hover {
-    border-color: rgba(34, 211, 238, 0.3);
-    box-shadow: 0 0 30px -5px rgba(34, 211, 238, 0.15);
+    border-color: var(--border-hover);
+    box-shadow: 0 8px 32px -8px var(--shadow-color);
     transform: translateY(-4px);
+  }
+  
+  /* Light mode glass card adjustments */
+  [data-theme="light"] .glass-card {
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-theme="light"] .glass-card-hover:hover {
+    box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.15);
   }
   
   /* Electric glow effect */

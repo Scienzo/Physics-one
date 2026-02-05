@@ -3,7 +3,7 @@ import { Hero, WhyDifferent, Batches, Testimonials, Bio, FAQ, Footer } from './s
 
 function App() {
   return (
-    <div className="min-h-screen bg-physics-dark-900">
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
       <Navbar />
       <Hero />
       <WhyDifferent />

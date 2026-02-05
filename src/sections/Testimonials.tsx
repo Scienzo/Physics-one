@@ -60,7 +60,7 @@ const testimonials = [
 const Testimonials = () => {
 
   return (
-    <section id="testimonials" className="py-16 sm:py-20 bg-gradient-to-b from-physics-dark-900 to-physics-dark-800">
+    <section id="testimonials" className="py-16 sm:py-20" style={{ background: 'linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary))' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
@@ -70,10 +70,10 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4" style={{ color: 'var(--text-heading)' }}>
               Hall of <span className="text-electric-400">Fame</span>
             </h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
               Success stories from our students who achieved exceptional results in GCE A/L
             </p>
           </motion.div>
@@ -102,10 +102,10 @@ const Testimonials = () => {
                   </div>
 
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-white font-semibold text-lg mb-1">
+                    <h3 className="font-semibold text-lg mb-1" style={{ color: 'var(--text-heading)' }}>
                       {testimonial.name}
                     </h3>
-                    <p className="text-slate-400 text-sm mb-2">{testimonial.batch}</p>
+                    <p className="text-sm mb-2" style={{ color: 'var(--text-secondary)' }}>{testimonial.batch}</p>
 
                     {/* Z-Score Badge */}
                     <div className="inline-flex items-center gap-2 bg-plasma-500/10 border border-plasma-500/30 rounded-full px-3 py-1">
@@ -150,7 +150,7 @@ const Testimonials = () => {
                   >
                     <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
                   </svg>
-                  <p className="text-slate-300 text-sm leading-relaxed pl-6">
+                  <p className="text-sm leading-relaxed pl-6" style={{ color: 'var(--text-secondary)' }}>
                     {testimonial.testimonial}
                   </p>
                 </div>

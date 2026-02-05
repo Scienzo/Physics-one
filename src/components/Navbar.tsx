@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/5 backdrop-blur-2xl border-b border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] z-50">
+    <nav className="fixed top-0 left-0 right-0 backdrop-blur-2xl border-b shadow-[0_8px_32px_0_var(--shadow-color)] z-50" style={{ backgroundColor: 'var(--glass-bg)', borderColor: 'var(--border-default)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -22,7 +23,7 @@ export default function Navbar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <span className="text-xl font-bold text-white group-hover:text-electric-400 transition-colors duration-200">
+              <span className="text-xl font-bold group-hover:text-electric-400 transition-colors duration-200" style={{ color: 'var(--text-heading)' }}>
                 Physics<span className="text-electric-400">+</span>
               </span>
             </a>
@@ -34,7 +35,10 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="px-4 py-2 text-slate-300 hover:text-white font-medium transition-all duration-200 relative group"
+                className="px-4 py-2 font-medium transition-all duration-200 relative group" 
+                style={{ color: 'var(--text-secondary)' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--text-heading)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
               >
                 {link.name}
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-electric-400 to-electric-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
@@ -46,13 +50,16 @@ export default function Navbar() {
             >
               Enroll Now
             </a>
+            <ThemeToggle className="ml-3" />
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-electric-400 transition-colors duration-200 p-2"
+              className="hover:text-electric-400 transition-colors duration-200 p-2"
+              style={{ color: 'var(--text-heading)' }}
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -67,12 +74,13 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden pb-4 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] mt-2">
+          <div className="md:hidden pb-4 backdrop-blur-2xl rounded-xl shadow-[0_8px_32px_0_var(--shadow-color)] mt-2" style={{ backgroundColor: 'var(--glass-bg)', border: '1px solid var(--border-default)' }}>
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="block py-3 px-4 text-slate-300 hover:text-white hover:bg-white/5 rounded-lg mx-2 my-1 transition-all duration-200"
+                className="block py-3 px-4 hover:bg-white/5 rounded-lg mx-2 my-1 transition-all duration-200"
+                style={{ color: 'var(--text-secondary)' }}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

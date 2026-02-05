@@ -1,6 +1,6 @@
 export default function Bio() {
   return (
-    <section id="about" className="py-20 bg-physics-dark-800 relative overflow-hidden">
+    <section id="about" className="py-20 relative overflow-hidden" style={{ backgroundColor: 'var(--bg-secondary)' }}>
       {/* Decorative Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-electric-500/5 rounded-full blur-3xl" />
@@ -25,10 +25,10 @@ export default function Bio() {
 
           {/* Content */}
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: 'var(--text-heading)' }}>
               About the <span className="text-electric-400">Instructor</span>
             </h2>
-            <p className="text-slate-400 mb-6 leading-relaxed">
+            <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
               With over 15 years of experience in teaching physics, I have helped
               thousands of students achieve their academic goals. My teaching methodology
               focuses on building strong conceptual understanding rather than rote learning.
@@ -36,19 +36,19 @@ export default function Bio() {
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="glass-card glass-card-hover p-4">
                 <h3 className="text-2xl font-bold text-electric-400">15+</h3>
-                <p className="text-slate-400">Years Experience</p>
+                <p style={{ color: 'var(--text-secondary)' }}>Years Experience</p>
               </div>
               <div className="glass-card glass-card-hover p-4">
                 <h3 className="text-2xl font-bold text-electric-400">5000+</h3>
-                <p className="text-slate-400">Students Taught</p>
+                <p style={{ color: 'var(--text-secondary)' }}>Students Taught</p>
               </div>
               <div className="glass-card glass-card-hover p-4">
                 <h3 className="text-2xl font-bold text-electric-400">95%</h3>
-                <p className="text-slate-400">Success Rate</p>
+                <p style={{ color: 'var(--text-secondary)' }}>Success Rate</p>
               </div>
               <div className="glass-card glass-card-hover p-4">
                 <h3 className="text-2xl font-bold text-electric-400">4.9</h3>
-                <p className="text-slate-400">Student Rating</p>
+                <p style={{ color: 'var(--text-secondary)' }}>Student Rating</p>
               </div>
             </div>
           </div>

@@ -59,7 +59,7 @@ export default function Batches() {
   };
 
   return (
-    <section id="batches" className="py-16 sm:py-20 bg-gradient-to-b from-physics-dark-800 to-physics-dark-900 relative overflow-hidden">
+    <section id="batches" className="py-16 sm:py-20 relative overflow-hidden" style={{ background: 'linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary))' }}>
       {/* Decorative Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-electric-500/5 rounded-full blur-3xl" />
@@ -75,10 +75,10 @@ export default function Batches() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3" style={{ color: 'var(--text-heading)' }}>
               Active <span className="text-electric-400">Batches</span>
             </h2>
-            <p className="text-slate-400 text-sm sm:text-base">
+            <p className="text-sm sm:text-base" style={{ color: 'var(--text-secondary)' }}>
               දැනට පවතින පන්ති කණ්ඩායම්
             </p>
           </motion.div>
@@ -114,7 +114,7 @@ export default function Batches() {
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-1" style={{ color: 'var(--text-heading)' }}>
                       {batch.title}
                     </h3>
                     <p className="text-electric-400 text-sm">
@@ -125,25 +125,25 @@ export default function Batches() {
 
                 {/* Details */}
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-center gap-3 text-slate-300 text-sm">
+                  <div className="flex items-center gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                     <svg className="w-5 h-5 text-electric-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span>{batch.description}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-slate-300 text-sm">
+                  <div className="flex items-center gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                     <svg className="w-5 h-5 text-electric-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     <span>{batch.schedule}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-slate-300 text-sm">
+                  <div className="flex items-center gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                     <svg className="w-5 h-5 text-electric-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                     </svg>
                     <span>{batch.mode}</span>
                   </div>
-                  <div className="flex items-center gap-3 text-slate-300 text-sm">
+                  <div className="flex items-center gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                     <svg className="w-5 h-5 text-electric-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>

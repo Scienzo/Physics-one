@@ -20,7 +20,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-physics-dark-950 text-white">
+    <footer style={{ backgroundColor: 'var(--bg-deep)', color: 'var(--text-primary)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
@@ -43,7 +43,7 @@ const Footer = () => {
               </div>
               <h3 className="text-xl font-bold">Physics<span className="text-electric-400">+</span></h3>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-sm leading-relaxed max-w-xs" style={{ color: 'var(--text-secondary)' }}>
               Transforming how Sri Lankan students learn and master A/L Physics through visualization and logic.
             </p>
 
@@ -104,13 +104,14 @@ const Footer = () => {
 
           {/* Quick Links Column */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+            <h3 className="text-lg font-semibold" style={{ color: 'var(--text-heading)' }}>Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-slate-400 hover:text-electric-400 transition-colors duration-200 text-sm"
+                    className="hover:text-electric-400 transition-colors duration-200 text-sm"
+                    style={{ color: 'var(--text-secondary)' }}
                   >
                     {link.name}
                   </a>
@@ -121,9 +122,9 @@ const Footer = () => {
 
           {/* Contact Us Column */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Contact Us</h3>
+            <h3 className="text-lg font-semibold" style={{ color: 'var(--text-heading)' }}>Contact Us</h3>
             <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-slate-400 text-sm">
+              <li className="flex items-center gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                 <svg
                   className="w-5 h-5 text-electric-400 flex-shrink-0"
                   fill="none"
@@ -141,7 +142,7 @@ const Footer = () => {
                   +94 77 361 7089
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-slate-400 text-sm">
+              <li className="flex items-center gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                 <svg
                   className="w-5 h-5 text-[#25D366] flex-shrink-0"
                   fill="currentColor"
@@ -153,7 +154,7 @@ const Footer = () => {
                   +94 77 361 7089
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-slate-400 text-sm">
+              <li className="flex items-center gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                 <svg
                   className="w-5 h-5 text-electric-400 flex-shrink-0"
                   fill="none"
@@ -171,7 +172,7 @@ const Footer = () => {
                   info@physicsplus.lk
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-slate-400 text-sm">
+              <li className="flex items-start gap-3 text-sm" style={{ color: 'var(--text-secondary)' }}>
                 <svg
                   className="w-5 h-5 text-electric-400 flex-shrink-0 mt-0.5"
                   fill="none"
@@ -198,8 +199,8 @@ const Footer = () => {
 
           {/* Get Notified Column */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Get Notified</h3>
-            <p className="text-slate-400 text-sm">
+            <h3 className="text-lg font-semibold" style={{ color: 'var(--text-heading)' }}>Get Notified</h3>
+            <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
               Subscribe to receive updates about new batches and resources.
             </p>
             <div className="flex flex-col sm:flex-row gap-2">
